@@ -1,0 +1,8 @@
+{
+  "name": "BSCAM",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "68dc4edb"
+}
