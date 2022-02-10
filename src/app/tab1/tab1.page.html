@@ -1,17 +1,42 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
+<ion-content  [fullscreen]="true">
+    <ion-title class="fixed-title">
+      <ion-row>
+        <ion-col size="10">
+          <h4>Boletin Salesiano</h4>
+        </ion-col>
+        <ion-col size="2" class="ion-text-right">
+          <div class="librito-container">
+            <img src="assets/librito.png" class="librito-header" />
+          </div>
+        </ion-col>
+      </ion-row>
     </ion-title>
-  </ion-toolbar>
-</ion-header>
+    <div class="cuna"></div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-grid class="main-bg">
+      <ion-row>
+        <ion-col *ngFor="let edicion of ediciones" size="6" sizeMd="4" >
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+          <div class="custom-card">
+            <img src="https://kyoskio.com/kyoskios/BS/android/{{ edicion.numero }}/{{edicion.portada}}" class="th-portadas" />
+            <!-- <ion-card-header>
+              <ion-card-subtitle  class="ion-text-nowrap ion-text-uppercase">{{ edicion.temames }}</ion-card-subtitle>
+            </ion-card-header>
+            <ion-row class="ion-justify-content-center">
+              <ion-col size="6">
+                
+              </ion-col>
+            </ion-row> -->
+            <ion-button color="light" (click)="viewEdicion(edicion.numero)" shape="round" fill="outline" expand="block">Ver</ion-button>
+          </div>
+
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button color="light" shape="round" expand="block" (click)="loadmore()">Cargar más</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
 </ion-content>
