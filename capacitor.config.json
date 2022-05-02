@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "BSCAM",
+	"appId": "com.mpdg.kioskobs",
+	"appName": "Boletin Salesiano CAM",
 	"webDir": "www",
 	"bundledWebRuntime": false
 }

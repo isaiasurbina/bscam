@@ -53,14 +53,7 @@ export class Tab1Page {
   }
   viewEdicion(numero){
     //window.location.href = 'https://kyoskio.com/kyoskios/BS/android/' + numero + '/Cover.html' ;
-    this.browser = this.iab.create('https://kyoskio.com/kyoskios/BS/android/' + numero + '/Cover.html', null, 'hideurlbar=yes,hidenavigationbuttons=yes');
-    this.browser.on('loadstart').subscribe(event => {
-        
-        if(event.url.includes('closewindow')) {
-          this.browser.close();
-        }
-    });
-   
+    this.rout.navigate(['edview'],{ queryParams: { edicion: numero }});
   }
   
 }

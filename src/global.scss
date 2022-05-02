@@ -67,3 +67,18 @@ ion-grid.main-bg {
     width: 30px;
     height: auto;
 }
+iframe.edicion-frame {
+    border: 0 none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: white;
+}
